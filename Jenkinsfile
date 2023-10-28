@@ -10,21 +10,21 @@ pipeline {
         stage('Containerized Apps') {
             steps {
                 sh '''
-                docker compose build
+                docker-compose build
                 '''
             }
         }
         stage('Push Image') {
             steps {
                 sh '''
-                docker compose push
+                docker-compose push
                 '''
             }
         }        
         stage('Deploy Apps') {
             steps {
                 sh '''
-                docker compose up -d
+                docker-compose up -d
                 '''
             }
         }    
