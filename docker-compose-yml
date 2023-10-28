@@ -2,6 +2,7 @@ version: "3.9"
 services:
 
   backend:
+    image: rydrafi/webinar-images
     build: ./apps
     restart: always
     links:
