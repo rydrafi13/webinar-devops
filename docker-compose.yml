@@ -34,14 +34,6 @@ services:
     environment:
       - PMA_HOST=db
 
-  web:
-    build: ./nginx
-    restart: always
-    ports:
-    - "80:80"
-    depends_on:
-    - backend
-
 volumes:
   app-data:
   db-data:
