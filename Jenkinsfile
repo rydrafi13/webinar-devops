@@ -27,6 +27,11 @@ pipeline {
                 docker compose up -d
                 '''
             }
-        }    
+        }
+        stage('Alert') {
+            steps {
+                discordSend description: 'Notified From Jenkins', footer: '', image: '', link: 'http://10.10.10.89:8080/job/build-apps/', result: 'SUCCESS|UNSTABLE|FAILURE|ABORTED', scmWebUrl: '', thumbnail: '', title: 'build-apps', webhookURL: 'https://discordapp.com/api/webhooks/1168761107662516345/t7xdaN68lrM-Fw21DoLaFhFTQ66hAeUV-DbiNasfY4AlfIo5A8AA6jglmWvAb4X9YLeo'
+            }
+        }        
     }
 }
