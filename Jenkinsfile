@@ -30,8 +30,8 @@ pipeline {
         }
     }
     post {
-      failure {
-        discordSend description: 'ERROR Jenkins', enableArtifactsList: true, footer: '', image: '', link: 'http://10.10.10.89:8080/job/build-apps/', result: 'FAILURE', scmWebUrl: 'https://github.com/rydrafi13/webinar-devops', showChangeset: true, thumbnail: '', title: 'build-apps', webhookURL: 'https://discordapp.com/api/webhooks/1168761107662516345/t7xdaN68lrM-Fw21DoLaFhFTQ66hAeUV-DbiNasfY4AlfIo5A8AA6jglmWvAb4X9YLeo'
+      always {
+        discordSend description: '', enableArtifactsList: true, footer: '', image: '', link: '', result: '', scmWebUrl: '', showChangeset: true, thumbnail: '', title: '', webhookURL: 'https://discord.com/api/webhooks/1167421282934079548/d2VMeAsU9Z1Qfm3aXvAKhOtisUh7_n3GRwB0hzXu33eUCFAsDobAaEQxMRgnXsbMREqT'
       }
     }        
 }
