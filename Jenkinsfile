@@ -31,7 +31,7 @@ pipeline {
     }
     post {
       always {
-        discordSend description: 'Jenkins Pipeline Build', enableArtifactsList: true, footer: JOB_NAME " " BUILD_NUMBER, image: '', link: env.BUILD_URL, result: currentBuild.currentResult, scmWebUrl: '', showChangeset: true, thumbnail: '', title: JOB_NAME, webhookURL: 'https://discord.com/api/webhooks/1167421282934079548/d2VMeAsU9Z1Qfm3aXvAKhOtisUh7_n3GRwB0hzXu33eUCFAsDobAaEQxMRgnXsbMREqT'
+        discordSend description: 'Jenkins Pipeline Build', enableArtifactsList: true, footer: `JOB_NAME BUILD_NUMBER`, image: '', link: env.BUILD_URL, result: currentBuild.currentResult, scmWebUrl: '', showChangeset: true, thumbnail: '', title: JOB_NAME, webhookURL: 'https://discord.com/api/webhooks/1167421282934079548/d2VMeAsU9Z1Qfm3aXvAKhOtisUh7_n3GRwB0hzXu33eUCFAsDobAaEQxMRgnXsbMREqT'
       }
     }        
 }
